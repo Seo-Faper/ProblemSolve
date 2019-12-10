@@ -1,9 +1,12 @@
 
 import java.util.Arrays;
+import java.util.Scanner;
 
-public class Ex55 {
+public class Ex56 {
 	public static void main(String[] args) {
-		int num = 1000000;
+		Scanner sc = new Scanner(System.in);
+		int m = sc.nextInt();
+		int num = sc.nextInt();
 		int[] arr = new int[num+1];
 		for(int i = 2; i<=num; i++) {
 			arr[i] = i;
@@ -19,6 +22,7 @@ public class Ex55 {
 
 		    }
 		 Arrays.stream(arr).filter(e-> e !=0).forEach(e->{
+			 if(e>=m)
 			 System.out.println(e);
 		 });
 	}
