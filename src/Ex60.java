@@ -11,7 +11,7 @@ public class Ex60 {
 			System.out.println(f(h,w,n));
 		}
 	}
-
+	
 	private static String f(int h, int w, int n) {
 		// TODO Auto-generated method stub
 		int XX = n%h;
