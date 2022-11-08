@@ -1,42 +1,34 @@
-package ½ÃÁð2;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class Ex22 {
-	static int k = 0;
-	public static void main(String[] args) {
-		ArrayList<Integer> list = 
-				new ArrayList<Integer>();
-		list.add(1);
-		list.add(2);
-		list.add(3);
-		list.add(9);
-		list.add(10);
-		list.add(12);
-		
-		
-		
-		while(true) {
-			if(isK()) {
-				break;
-			}
-		}
-		
-		list.set(1, list.get(0)+list.get(1)*2);
-		
-		list.remove(0);
-		
-		Collections.sort(list, new Com());
-		
+ public static void main(String[] args) {
+	HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
+	Scanner sc = new Scanner(System.in);
+	int[] arr = new int[8];
+	for(int i = 0; i<8; i++) {
+		arr[i] = sc.nextInt();
 	}
-	private static boolean isK() {
-		// TODO Auto-generated method stub
-		return false;
+	String[] krr = new String[8];
+	for(int i = 0; i<8; i++) {
+		krr[i] = arr[i]+" "+i;
 	}
-	
+	Arrays.sort(krr);
+ 	int[] grr = new int[5];
+ 	int[] in = new int[5];
+ 	int sum = 0;
+ 	for(int i = 0; i<5; i++) {
+ 		 sum += grr[i] = Integer.parseInt(krr[7-i].substring(0, krr[7-i].length()-2));
+ 		 
+ 	}
+ 	for(int i = 7; i>2; i++) {
+ 		String[] f = krr[i].split(" ");
+ 		in[7-i] = Integer.parseInt(f[1]);
+ 		}
+ 	Arrays.sort(in);
+ 	System.out.println(sum);
+ 	
+ }
 }
-class Com implements Comparator<Integer> {
-	@Override public int compare(Integer a, Integer b) 
-	{ return a.compareTo(b); } }
